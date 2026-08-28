@@ -1,0 +1,19 @@
+{
+  "name": "awaaz-desk-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "check": "node --check src/server.js && node --check src/openai.js && node --check src/email.js && node --check src/config.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.19.2",
+    "nodemailer": "^9.0.6",
+    "openai": "^4.77.0",
+    "zod": "^3.24.1"
+  }
+}

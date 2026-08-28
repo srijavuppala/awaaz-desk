@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="./assets/favicon.svg">
     <link rel="icon" href="./assets/favicon.svg">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/form.css">
   </head>
   <body class="antialiased">
     <main>
@@ -34,7 +35,7 @@
             <h1>A simple AI receptionist for missed calls.</h1>
             <p class="lede">Awaaz Desk is starting with small, supervised voice-agent pilots for clinics, education centers, home services, and real estate teams. We answer simple calls, collect details, and hand off the messy parts to a person.</p>
             <div class="hero-actions">
-              <a class="primary-action" href="mailto:founder@awaazdesk.in">Ask for a pilot</a>
+              <a class="primary-action" href="#contact">Ask for a pilot</a>
               <a class="secondary-action" href="#plan">See how it works</a>
             </div>
             <dl class="stats" aria-label="Pilot metrics">
@@ -197,8 +198,41 @@
       <section class="cta">
         <h2>Interested in being an early pilot?</h2>
         <p>Send a short note with your business type, city, and the kind of calls your team misses most often.</p>
-        <a class="primary-action" href="mailto:founder@awaazdesk.in">founder@awaazdesk.in</a>
+        <form class="lead-form" data-lead-form id="contact">
+          <label>
+            <span>Name</span>
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" autocomplete="email">
+          </label>
+          <label>
+            <span>Phone</span>
+            <input name="phone" autocomplete="tel">
+          </label>
+          <label>
+            <span>City</span>
+            <input name="city" autocomplete="address-level2">
+          </label>
+          <label>
+            <span>Business type</span>
+            <input name="businessType" required>
+          </label>
+          <label>
+            <span>Call volume</span>
+            <input name="callVolume">
+          </label>
+          <label class="wide">
+            <span>Missed-call problem</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button class="primary-action" type="submit">Request pilot</button>
+          <p class="lead-status" data-lead-status aria-live="polite"></p>
+        </form>
+        <a class="email-link" href="mailto:hello@awaazdesk.in">hello@awaazdesk.in</a>
       </section>
     </main>
+    <script src="./assets/app.js"></script>
   </body>
 </html>
