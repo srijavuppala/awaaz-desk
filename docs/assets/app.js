@@ -19,7 +19,7 @@ if (form && statusEl) {
     statusEl.textContent = "Sending...";
 
     try {
-      const response = await fetch(`${apiBaseUrl.replace(/\\/$/, "")}/api/leads`, {
+      const response = await fetch(`${apiBaseUrl.replace(/\/$/, "")}/api/leads`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)

@@ -10,15 +10,15 @@ The backend lives in `backend/`. It provides:
 - `POST /api/scripts` for starter AI receptionist scripts.
 - `GET /health` for deployment checks.
 
-GitHub Pages cannot run backend code, so deploy `backend/` separately to a Node host such as Render, Railway, Fly.io, or Vercel Functions. After deployment, set the frontend API URL by adding this before `docs/assets/app.js` in `docs/index.html` or by visiting the page with `?api=https://your-backend.example.com` while testing:
+GitHub Pages cannot run backend code, so deploy `backend/` separately to a Node host such as Render, Railway, Fly.io, or Vercel Functions. After deployment, set the frontend API URL in `docs/assets/config.js`:
 
-```html
-<script>
-  window.AWAAZ_API_URL = "https://your-backend.example.com";
-</script>
+```js
+window.AWAAZ_API_URL = "https://your-backend.example.com";
 ```
 
-The intended public email identity is `hello@awaazdesk.in`. Create that mailbox with a domain email provider, then add its SMTP credentials to the backend environment.
+You can also test without committing a backend URL by visiting the page with `?api=https://your-backend.example.com`.
+
+The intended public email identity is `hello@awaazdesk.in`. See `EMAIL_SETUP.md` for the mailbox and DNS checklist.
 
 ## Deploy to GitHub Pages
 
